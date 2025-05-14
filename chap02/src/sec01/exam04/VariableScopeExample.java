@@ -6,7 +6,7 @@ public class VariableScopeExample {
 		int v1 = 15; // main 메소드 블록에서 선언
 		
 		if (v1 > 10) {
-			int v2; // if 블록에서 선언
+			int v2 = 0; // if 블록에서 선언
 			v2 = v1 - 10;
 		}
 		
