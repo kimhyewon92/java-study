@@ -14,7 +14,7 @@ public class Homework01 {
 		
 		System.out.println("몸무게(kg) : " + weight);
 		System.out.println("키(m) : " + height);
-		System.out.println("BMI 지수 : " + weight/(height*height));
+		System.out.printf("BMI 지수 : %.2f", weight/(height*height));
 	}
 
 }

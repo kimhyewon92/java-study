@@ -10,8 +10,9 @@ public class Homework04 {
 		
 		System.out.print("문자를 입력하세요 : ");
 		String charA = scanner.nextLine();
-		
 		char keyCode = charA.charAt(0);
+//		scanner.nextLine().charAt(0); // 이어서쓰기
+		
 		System.out.println( charA + "의 유니코드 : " + (int)keyCode);
 	}
 }
