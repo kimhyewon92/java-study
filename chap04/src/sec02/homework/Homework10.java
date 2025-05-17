@@ -8,9 +8,9 @@ public class Homework10 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("문자열 : ");
+		System.out.print("문자열 : ");
 		String words = sc.nextLine();
-		System.out.println("문자 : ");
+		System.out.print("문자 : ");
 		String word = sc.nextLine();
 		
 		for (int i = 0; i < words.length(); i++) {
