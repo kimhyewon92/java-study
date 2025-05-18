@@ -11,20 +11,20 @@ public class Homework03 {
 			System.out.print("정수(1~50) : ");
 			int num = sc.nextInt();
 			
-			int sum = 0;
 			if (!(num >= 1 && num <= 50)) {
 				System.out.println("1~50 사이의 정수를 입력하세요.");
-				continue;
 			} else {
+				int sum = 0;
 				for (int i = 1; i <= num; i++) {
 					if (i % 2 == 0) {
 						sum += i;
 					}
 				}
+				System.out.println("합계 : " + sum);
+				break;
 			}
-			System.out.println("합계 : " + sum);
-			break;
 		}
+		sc.close();
 	}
 
 }

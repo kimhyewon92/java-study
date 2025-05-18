@@ -2,7 +2,7 @@ package sec02.homework;
 
 import java.util.Scanner;
 
-public class Homework10 {
+public class Homework10copy {
 	
 	public static void main(String[] args) {
 		
@@ -11,14 +11,12 @@ public class Homework10 {
 		
 		int count = 0;
 		char again;
-		int askAn = 1;
 		
-		wordF: while (askAn == 1) {
+		wordF: while (true) {
 			System.out.print("문자열 : ");
 			String words = sc.nextLine();
 			System.out.print("문자 : ");
 			char word = sc.nextLine().charAt(0);
-			
 			count = 0;
 			for (int i = 0; i < words.length(); i++) {
 				if (word == words.charAt(i)) {
@@ -34,12 +32,10 @@ public class Homework10 {
 					System.out.println("프로그램을 종료합니다.");
 					break wordF;
 				} else if (again == 'Y' || again == 'y') {
-					askAn = 1;
-					break;
+					continue wordF;
 				} else {
 					System.out.println("잘못된 대답입니다. 다시 입력해주세요.");
 				}
-				sc.close();
 			}
 		}
 		

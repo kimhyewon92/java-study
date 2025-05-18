@@ -8,31 +8,17 @@ public class Homework05 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("입력 : ");
-		String words = sc.nextLine();
-		
-//		while (true) {
-//			
-//			if (!("탈출".equals(words))) {
-//				System.out.println(words);
-//			} else {
-//				System.out.println("프로그램 종료");
-//			}
-//			break;
-//		}
 		
 		for (; ;) {
-			if (!("탈출".equals(words))) {
-				System.out.println(words);
-				System.out.print("입력 : ");
-				words = sc.nextLine();
-			} else {
-				System.out.println("프로그램 종료");
+			System.out.print("입력 : ");
+			String words = sc.nextLine();
+			
+			if ("탈출".equals(words)) {
 				break;
 			}
+			System.out.println(words);
 		}
-		
-		
+		System.out.println("프로그램 종료");
 		
 	}
 

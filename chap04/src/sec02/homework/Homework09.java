@@ -8,10 +8,10 @@ public class Homework09 {
 
 		Scanner sc = new Scanner(System.in);
 		
+		while (true) {
 		System.out.print("정수 : ");
 		int num = sc.nextInt();
 		
-		while (true) {
 			if (num > 0) {
 				for (int i = 0; i < num; i++) {
 					if (i%2 == 0) {
@@ -23,8 +23,6 @@ public class Homework09 {
 				break;
 			} else {
 				System.out.println("양수가 아닙니다.");
-				System.out.print("정수 : ");
-				num = sc.nextInt();
 			}
 		}
 		
