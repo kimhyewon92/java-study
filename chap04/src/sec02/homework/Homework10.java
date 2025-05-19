@@ -11,9 +11,8 @@ public class Homework10 {
 		
 		int count = 0;
 		char again;
-		int askAn = 1;
 		
-		wordF: while (askAn == 1) {
+		wordF: while (true) {
 			System.out.print("문자열 : ");
 			String words = sc.nextLine();
 			System.out.print("문자 : ");
@@ -30,11 +29,12 @@ public class Homework10 {
 			while (true) {
 				System.out.print("다시 입력하시겠습니까? : ");
 				again = sc.nextLine().charAt(0);
-				if (again == 'N' || again == 'n') {
+				if (again == 'N' || again == 'n') { // equalsIgnoreCase("n") 대소문자 구분x
 					System.out.println("프로그램을 종료합니다.");
+//					return; // main() 메소드 종료
+//					System.exit(0); // 자바 프로그램(JVM)을 강제 종료
 					break wordF;
 				} else if (again == 'Y' || again == 'y') {
-					askAn = 1;
 					break;
 				} else {
 					System.out.println("잘못된 대답입니다. 다시 입력해주세요.");
