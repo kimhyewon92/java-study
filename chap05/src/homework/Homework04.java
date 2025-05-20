@@ -5,17 +5,20 @@ public class Homework04 {
 	public static void main(String[] args) {
 		
 		int[] lottoNum = new int[6];
-		int count = 0;
+		int pointer = 0;
 		
-		for (int j = 0; j < lottoNum.length; j++) {
+		while(true) {
 			int num = (int) (Math.random() * 45) + 1;
-			if (num == lottoNum[j]) {
-				continue;
-			} else {
-				lottoNum[j] = num;
+			for (int i = 0; i < lottoNum.length ; i++) {
+				if (num == lottoNum[i]) {
+					continue;
+				} else {
+					
+				}
+				
 			}
 		}
-//		
+		
 //		int temp = 0;
 //		for (int h = 0; h < lottoNum.length-2; h++) {
 //			for (int j = 0; j < lottoNum.length-1; j++) {
@@ -28,9 +31,9 @@ public class Homework04 {
 //		}
 		
 		
-		for (int k : lottoNum) {
-			System.out.print(k + " ");
-		}
+//		for (int k : lottoNum) {
+//			System.out.print(k + " ");
+//		}
 		
 		
 		
