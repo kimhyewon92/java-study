@@ -1,6 +1,6 @@
-package homework_mine.person;
+package homework.object.person;
 
-import homework_mine.person.open.Person;
+import homework.object.person.open.Person;
 
 public class PersonRun {
 
@@ -15,7 +15,7 @@ public class PersonRun {
 		System.out.println(per1.name + "는 " + per1.age + "살 입니다.");
 		
 		// close package
-		homework_mine.person.close.Person per2 = new homework_mine.person.close.Person();
+		homework.object.person.close.Person per2 = new homework.object.person.close.Person();
 		
 		per2.setName("김철수");
 		per2.setAge(20);

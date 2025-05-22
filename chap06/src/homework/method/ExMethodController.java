@@ -1,4 +1,4 @@
-package homework_mine.method2;
+package homework.method;
 
 public class ExMethodController {
 	

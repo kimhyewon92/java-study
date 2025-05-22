@@ -1,4 +1,4 @@
-package homework_mine;
+package homework.object.student;
 
 public class StudentRun {
 

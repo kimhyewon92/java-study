@@ -1,4 +1,4 @@
-package homework_mine.person.open;
+package homework.object.person.open;
 
 public class Person {
 

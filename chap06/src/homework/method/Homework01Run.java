@@ -1,6 +1,6 @@
-package homework_mine.method1;
+package homework.method;
 
-public class Homework01m {
+public class Homework01Run {
 
 	public static void main(String[] args) {
 		Homework01 hw1 = new Homework01();

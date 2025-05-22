@@ -1,4 +1,4 @@
-package homework_mine;
+package homework.object.member;
 
 public class Member {
 

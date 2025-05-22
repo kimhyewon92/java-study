@@ -1,4 +1,4 @@
-package homework_mine.accountbank;
+package homework.object.accountBank;
 
 public class Account {
 	private String accountNumber;

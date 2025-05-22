@@ -1,4 +1,4 @@
-package homework_mine.person.close;
+package homework.object.person.close;
 
 public class Person {
 
