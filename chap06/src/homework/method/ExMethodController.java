@@ -9,7 +9,7 @@ public class ExMethodController {
 	
 //- 1~100까지 합을 반환하는 메소드구현
 	int sum(int a, int b) {
-		int sum = a;
+		int sum = 0;
 		for (int i = a; i < b; i++) {
 			sum += i;
 		}
@@ -26,16 +26,14 @@ public class ExMethodController {
 	}
 	
 //- 전달된 문자열에 영문자가 있는지 확인하는 결과를 반환하는 메소드 구현
-	int hasEng(String a) {
-		int count = 0;
+	public boolean hasEngChar(String a) {
 		for (int i = 0; i < a.length(); i++) {
 			if ((a.charAt(i) >= 'a' && a.charAt(i) <= 'z') ||
-				(a.charAt(i) >= 'A' && a.charAt(i) <= 'Z')	
-				) {
-				count++;
+				(a.charAt(i) >= 'A' && a.charAt(i) <= 'Z')) {
+				return true;
 			}
 		}
-		return count;
+		return false;
 	}
 	
 //- 문자열, 문자를 전달받아 문자열에 문자가 몇개있는지 출력하는 메소드구현

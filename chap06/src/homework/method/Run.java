@@ -6,7 +6,7 @@ public class Run {
 		
 		ExMethodController ex1 = new ExMethodController();
 		
-		System.out.println(ex1.hasEng("GOOD"));
+		System.out.println(ex1.hasEngChar("GOOD"));
 		
 		ex1.hasChar("가나", 'o');
 		

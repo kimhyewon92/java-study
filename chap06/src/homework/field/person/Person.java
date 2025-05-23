@@ -13,29 +13,7 @@ public class Person {
 		this.weight = weight;
 	}
 
-	public String getTelNum() {
-		return telNum;
-	}
-
-	public void setTelNum(String telNum) {
-		this.telNum = telNum;
-	}
-
-	public double getHeight() {
-		return height;
-	}
-
-	public void setHeight(double height) {
-		this.height = height;
-	}
-
-	public double getWeight() {
-		return weight;
-	}
-
-	public void setWeight(double weight) {
-		this.weight = weight;
-	}
+	
 	
 	
 }
