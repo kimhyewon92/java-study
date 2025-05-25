@@ -16,7 +16,7 @@ public class Student extends Person {
 	}
 	
 	public String toString() {
-		return super.toString() + "학년 : " + grade + "\n" + "전공 : " + major;
+		return super.toString() + "학년 : " + grade + "\n" + "전공 : " + major + "\n";
 	}
 	
 	

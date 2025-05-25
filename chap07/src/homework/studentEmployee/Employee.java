@@ -14,5 +14,25 @@ public class Employee extends Person {
 		this.salary = salary;
 		this.dept = dept;
 	}
+
+	public String toString() {
+		return super.toString() + "급여 : " + salary + "\n" + "부서 : " + dept + "\n";
+	}
+	
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	public String getDept() {
+		return dept;
+	}
+
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
 	
 }
