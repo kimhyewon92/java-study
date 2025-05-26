@@ -2,13 +2,9 @@ package homework.cake;
 
 public class ChocolateController {
 	
-	Chocolate c = new Chocolate();
-	
 	public String bakeChocolateCake(double flour, double cream, int cherry, int chip) {
-		c.setFlour(flour);
-		c.setCream(cream);
-		c.setCherry(cherry);
-		c.setChip(chip);
+		
+		Chocolate c = new Chocolate(flour, cream, cherry, chip);
 		
 		return "밀가루 : " + c.getFlour() + "(g)\n"
 		+ "크림 : " + c.getCream() + "(g)\n"

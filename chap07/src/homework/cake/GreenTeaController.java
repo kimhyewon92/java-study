@@ -2,13 +2,9 @@ package homework.cake;
 
 public class GreenTeaController {
 	
-	GreenTea gt = new GreenTea();
 	
 	public String bakeGreenTeaCake(double flour, double cream, double powder, int cheese) {
-		gt.setFlour(flour);
-		gt.setCream(cream);
-		gt.setPowder(powder);
-		gt.setCheese(cheese);
+		GreenTea gt = new GreenTea(flour, cream, powder, cheese);
 		
 		return "밀가루 : " + gt.getFlour() + "(g)\n"
 				+ "크림 : " + gt.getCream() + "(g)\n"

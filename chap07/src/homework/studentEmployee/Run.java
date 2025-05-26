@@ -35,9 +35,9 @@ public class Run {
 			System.out.print("급여 : ");
 			int salary = sc.nextInt();
 			System.out.print("부서 : ");
+			sc.nextLine();
 			String dept = sc.nextLine();
 			
-			sc.nextLine();
 			
 			employees[i] = new Employee(name, age, height, weight, salary, dept);
 			

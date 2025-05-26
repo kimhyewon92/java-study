@@ -12,6 +12,6 @@ public interface RemoteControl {
 // can be 관계
 // ~ 할 수 있다.
 // Airplane can be Flyable. (flyable 기능 명세)
-// Frighter can be fightable. (어떻게는 없음?)
+// Fighter can be fightable. (어떻게는 없음?)
 // TV can be RemoteControl.
 // Audio can be RemoteControl.
