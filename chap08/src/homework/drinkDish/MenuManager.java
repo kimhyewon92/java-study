@@ -5,7 +5,9 @@ public class MenuManager {
 	public static void main(String[] args) {
 		Menu[] menu = new Menu[5];
 		
-//		menu[0] = new Dish("김밥", 6000, "...");
+//		for (int i = 0; i < menu.length; i++) {
+//			int num = (int) (Math.random() * 2) + 1;
+//		}
 		
 		for (Menu menuEl : menu) {
 			menuEl.cook();
