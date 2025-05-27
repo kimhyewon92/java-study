@@ -1,5 +1,6 @@
 package homework.homework01;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Homework01 {
@@ -10,24 +11,24 @@ public class Homework01 {
 		
 		while (true) {
 			int randomNum = (int) (Math.random() * 50) + 1;
-			System.out.print("1~50사이의 숫자 : ");
-			int user = sc.nextInt();
-			count++;
-			
-			
-			if (user == randomNum) {
-				System.out.println("축하합니다~ 정답이에요");
-			} else if (user > randomNum) {
+			while (true) {
+				System.out.print("1~50사이의 숫자 : ");
+				try {
+					int user = sc.nextInt();
+				} catch (InputMismatchException e) {
+					System.out.println("잘못된 값입니다. 숫자를 입력해주세요.");
+				} finally {
+					break;
+				}
 			}
 			
-			
-//			try {
-//			} catch (Exception e) {
-//				System.out.println("잘못된 값입니다. 숫자를 입력해주세요.");
+//			if (user == randomNum) {
+//				System.out.println("축하합니다~ 정답이에요");
+//				break;
+//			} else if (user > randomNum) {
 //			}
-//			continue;
-		
-		
+			
+			
 		
 		}
 	}
