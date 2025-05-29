@@ -7,25 +7,32 @@ public class Run {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String sentence = "the quick brown fox jumps over the lazy dog";
-		String[] sentenceWords = sentence.split(" ");
+		String[] sentenceSplit = sentence.split(" ");
 		String words = "";
 		
 		System.out.print("단어를 입력하세요: ");
 		
-		while (true) {
-			words = sc.nextLine();
+		words = sc.nextLine();
 			
-			for (int i = 0; i < sentenceWords.length; i++) {
-				if (words.equals(sentenceWords[i])) {
-					System.out.print(words + " 다음 단어: " + sentenceWords[i+1]);
-				} else if (words.equals(sentenceWords[sentenceWords.length-1])) {
+		
+		if (sentence.contains(words)) {
+		
+		for (int i = 0; i < sentenceSplit.length; i++) {
+			if (words.equals(sentenceSplit[i])) {
+				if (words.equals(sentenceSplit[sentenceSplit.length-1])) {
 					System.out.println("마지막 단어입니다.");
 					break;
-				} else {
-				System.out.println("존재하지 않는 단어입니다.");
-				}
-			}
+					}
+				System.out.print(words + " 다음 단어: " + sentenceSplit[i+1]);
+			} 
 		}
+		
+		} else {
+			System.out.println("존재하지 않는 단어입니다.");
+		}
+		
+		
+		
 	}
 
 }

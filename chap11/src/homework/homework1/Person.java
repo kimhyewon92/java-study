@@ -11,7 +11,10 @@ public class Person {
 	}
 	
 	public Person(String name, int age, String address, char gender) {
-		
+		this.name = name;
+		this.age = age;
+		this.address = address;
+		this.gender = gender;
 	}
 	
 	public String getName() {
@@ -50,6 +53,8 @@ public class Person {
 	public String toString() {
 		return "Person [name=" + name + ", age=" + age + ", address=" + address + ", gender=" + gender + "]";
 	}
+
+	
 
 	
 }
