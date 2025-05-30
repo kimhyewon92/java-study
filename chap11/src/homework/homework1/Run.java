@@ -33,8 +33,7 @@ public class Run {
 					
 				}
 				Person pers = new Person(name, age, address, gender);	
-				System.out.println(pers.toString());
-				
+				System.out.println(pers);
 		}
 		
 		
