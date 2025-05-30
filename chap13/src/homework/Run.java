@@ -6,8 +6,6 @@ public class Run {
 		
 		BookMenu bookmenu = new BookMenu();
 		bookmenu.mainMenu();
-		
-		
 	}
 
 }

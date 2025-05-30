@@ -1,6 +1,7 @@
 package homework;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BookController {
@@ -16,7 +17,6 @@ public class BookController {
 
     public void insertBook(Book bk){
     	bookList.add(bk);
-        // 전달 받은 bk를 bookList에 추가
     }
 
     public List<Book> selectList(){
@@ -46,11 +46,11 @@ public class BookController {
     public Book deleteBook(String title, String author){
     	Book removeBook = null;
     	
-    	for (Book book : bookList) {
-			if (book.getTitle().contains(title) && book.getAuthor().contains(author)) {
-				
-			} else {
-				
+    	for (int i = 0; i < bookList.size(); i++) {
+			if (bookList.get(i).getTitle().equals(title) &&
+				bookList.get(i).getAuthor().equals(author)) {
+				removeBook = bookList.get(i);
+				bookList.remove(i);
 			}
 		}
     	return removeBook;
@@ -60,11 +60,12 @@ public class BookController {
         // 3. 삭제할 도서가 있는 경우 해당 도서를 removeBook에 대입
         // 4. removeBook 객체 반환
     }
-//
-//    public int ascBook(){
-//		    // Collections.sort와 Comparable활용
-//		    // 책 이름 기준으로 오름차순 정렬 후 1 반환
-//    }
+
+    public int ascBook(){
+    	Collections.sort(bookList);
+		    // Collections.sort와 Comparable활용
+    	return 1;
+    }
 
 	
 }
