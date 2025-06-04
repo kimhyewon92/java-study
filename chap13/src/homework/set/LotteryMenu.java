@@ -1,5 +1,6 @@
 package homework.set;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
 import homework.list.Book;
@@ -94,7 +95,6 @@ public class LotteryMenu {
 	}
 	public void winObject() {
 		System.out.println("===== 4. 당첨 대상 구성 =====");
-		System.out.println(lc.winObject());
 		if (lc.winObject() != null) {
 			System.out.println(lc.winObject());
 		} else {
@@ -102,7 +102,11 @@ public class LotteryMenu {
 		}
 	}
 	public void sortedWinObject() {
-		
+		Iterator<Lottery> iteratorWin = lc.sortedWinObject().iterator();
+		while (iteratorWin.hasNext()) {
+			Lottery element = iteratorWin.next();
+			System.out.println(element);
+		}
 	}
 	public void searchWinner() {
 		

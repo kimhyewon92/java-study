@@ -1,7 +1,9 @@
 package homework.set;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -24,15 +26,19 @@ public class LotteryController {
 	}
 	public Set<Lottery> winObject() {
 		if (lottery.size() > 4) {
-			List<Lottery> lottery2 = new ArrayList<Lottery>(lottery);
-			int num = (int) (Math.random() * lottery2.size());
+			List<Lottery> lotteryWin = new ArrayList<Lottery>(lottery);
+			int num = (int) (Math.random() * lotteryWin.size());
+			
 			return win;
 		} else {
 			return null;
 		}
 	}
 	public Set<Lottery> sortedWinObject() {
-		return lottery;
+		List<Lottery> win2 = new ArrayList<Lottery>(win);
+		Collections.sort(win2);
+		Set<Lottery> linkedWin = new LinkedHashSet<Lottery>(win2);
+		return linkedWin;
 		
 	}
 	public boolean searchWinner() {
