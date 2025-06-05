@@ -42,6 +42,13 @@ public class MemberController {
 	
 	public TreeMap<String, String> sameName(String name) {
 		Set<String> mapSet = map.keySet();
-		return null;
+		TreeMap<String, String> nameId = new TreeMap<String, String>();
+		
+		for (String mapKey : mapSet) {
+			if (name.equals(map.get(mapKey).getName())) {
+				nameId.put(mapKey, name);
+			}
+		}
+		return nameId;
 	}
 }

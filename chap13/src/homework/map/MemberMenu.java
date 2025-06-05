@@ -1,6 +1,9 @@
 package homework.map;
 
+import java.util.Map.Entry;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
 
 public class MemberMenu {
 	Scanner sc = new Scanner(System.in);
@@ -188,7 +191,12 @@ public class MemberMenu {
 		System.out.print("검색할 이름 : ");
 		String name = sc.nextLine();
 		
-		mc.sameName(name);
+		TreeMap<String, String> resultMap = mc.sameName(name);
+		
+		Set<Entry<String, String>> resultSet = resultMap.entrySet();
+		for (Entry<String, String> result : resultSet) {
+			System.out.println(result.getValue() + "-" + result.getKey());
+		}
 	}
 	
 	
