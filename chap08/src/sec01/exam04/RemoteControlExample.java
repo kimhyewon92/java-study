@@ -5,7 +5,7 @@ public class RemoteControlExample {
 	public static void main(String[] args) {
 		RemoteControl rc;
 		
-//		rc = new RemoteControl(); // 인터페이스는 객체의 사용 방법을 기술한 타임 => 객체 생성 불가
+//		rc = new RemoteControl(); // 인터페이스는 객체의 사용 방법을 기술한 타입 => 객체 생성 불가
 		
 		// 클래스는 설계도, 인터페이스는 설계 규격
 		// 대신에 인터페이스 타입에 구현 객체들을 담을 수 있다.

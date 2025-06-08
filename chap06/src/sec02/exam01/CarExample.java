@@ -19,7 +19,7 @@ public class CarExample {
 		
 		// 필드 값 변경
 		myCar.speed = 60;
-		System.out.println("수정된 속도: " + myCar.speed); // 초기값이 없으므로 int의 기본값 0이 들어감
+		System.out.println("수정된 속도: " + myCar.speed); 
 		
 		
 		
