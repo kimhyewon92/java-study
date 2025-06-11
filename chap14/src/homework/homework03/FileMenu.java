@@ -46,15 +46,23 @@ public class FileMenu {
 			System.out.print("내용 : ");
 			String text = sc.nextLine();
 			
-			if ("ex끝it".equals(text)) {
-				System.out.print("저장할 파일 명을 입력해주세요(ex. myFile.txt) : ");
-				String fileName = sc.nextLine();
-				
-//				if (fc.checkName(fileName))
-//				return;
+			if ((!"ex끝it".equals(text))) {
+				sb.append(text);
+			} else {
+				while (true) {
+					System.out.print("저장할 파일 명을 입력해주세요(ex. myFile.txt) : ");
+					String fileName = sc.nextLine();
+					
+					if (fc.checkName(fileName)) {
+						System.out.print("이미 존재하는 파일입니다. 덮어쓰시겠습니까?(y/n) : ");
+						
+						return;
+					} else {
+						fc.fileSave(fileName, sb);
+					}
+				}
 			}
 			
-			sb.append(text);
 		}
 	}
 	
