@@ -55,7 +55,12 @@ public class FileMenu {
 					
 					if (fc.checkName(fileName)) {
 						System.out.print("이미 존재하는 파일입니다. 덮어쓰시겠습니까?(y/n) : ");
-						
+						String checkNameAnswer = sc.nextLine();
+						if (checkNameAnswer.equalsIgnoreCase("y")) {
+							
+						} else {
+							
+						}
 						return;
 					} else {
 						fc.fileSave(fileName, sb);
