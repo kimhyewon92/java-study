@@ -91,6 +91,93 @@ public class Main {
 		System.out.println();
 	}
 
+	/**
+	 * 게시글 조회
+	 */
+	
+	private static void select() {
+		System.out.println("========== 게시글 조회 ==========");
+		System.out.print("글 번호: ");
+		int no = sc.nextInt();
+		sc.nextLine(); // 개행문자 제거
+		print(boardService.select(no));
+	}
+
+	/**
+	 * 게시글 정보 입력
+	 */
+	private static Board input() {
+		System.out.print("제목: ");
+		String title = sc.nextLine();
+		System.out.print("작성자: ");
+		String writer = sc.nextLine();
+		System.out.print("내용: ");
+		String content = sc.nextLine();
+		
+		Board board = new Board(title, writer, content);
+		return board;
+	}
+	
+	
+	/**
+	 * 게시글 등록
+	 */
+	private static void insert() {
+		System.out.println("========== 게시글 등록 ==========");
+		
+		Board board = input();
+		
+		// 게시글 등록 요청
+		int result = boardService.insert(board);
+		if (result > 0) {
+			System.out.println("★ 게시글이 등록되었습니다.");
+		} else {
+			System.out.println("★ 게시글 등록에 실패하였습니다.");
+		}
+	}
+	
+	/**
+	 * 게시글 수정
+	 */
+	private static void update() {
+		System.out.println("========== 게시글 수정 ==========");
+		
+		System.out.print("게시글 번호: ");
+		int no = sc.nextInt();
+		sc.nextLine();
+		
+		Board board = input();
+		board.setNo(no);
+		
+		// 게시글 수정 요청
+		int result = boardService.update(board);
+		if (result > 0) {
+			System.out.println("★ 게시글이 수정되었습니다.");
+		} else {
+			System.out.println("★ 게시글 수정에 실패하였습니다.");
+		}
+	}
+	
+	/**
+	 * 게시글 삭제
+	 */
+	private static void delete() {
+		System.out.println("========== 게시글 삭제 ==========");
+		
+		System.out.print("게시글 번호: ");
+		int no = sc.nextInt();
+		sc.nextLine();
+		
+		// 게시글 삭제 요청
+		int result = boardService.delete(no);
+		if (result > 0) {
+			System.out.println("★ 게시글을 삭제하였습니다.");
+		} else {
+			System.out.println("★ 게시글 삭제에 실패하였습니다.");
+		}
+	}
+	
+	
 	public static void main(String[] args) {
 		int menuNo = 0;
 		
@@ -110,12 +197,28 @@ public class Main {
 				case 1:
 					list(); // 게시글 목록
 					break;
+				case 2:
+					select(); // 게시글 조회
+					break;
+				case 3:
+					insert(); // 게시글 등록
+					break;
+				case 4:
+					update(); // 게시글 수정
+					break;
+				case 5:
+					delete(); // 게시글 삭제
+					break;
 			}
 		}
 		
 		System.out.println("프로그램을 종료합니다!");
 		
 	}
+
+	
+
+	
 
 
 	
