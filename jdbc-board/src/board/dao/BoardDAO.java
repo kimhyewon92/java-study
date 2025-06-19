@@ -199,7 +199,8 @@ public class BoardDAO extends JDBConnection {
 	/**
 	 * 게시글 삭제
 	 */
-//	public int delete(int no) {
-//		
-//	}
+	public int delete(int no) {
+		return no;
+		
+	}
 }
