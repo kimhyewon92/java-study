@@ -27,10 +27,10 @@ public class BookStoreApplication {
 			
 			if (!(isValidISBN(isbn))) continue; 
 			
-			try {
+//			try {
 			System.out.print("가격을 입력하세요: ");
-			int price = Integer.parseInt(sc.nextLine());
-//			sc.nextLine();
+			int price = sc.nextInt();
+			sc.nextLine();
 			// 책 종류에 따른 생성자
 			if (bookType.equals("소설")) {
 				bookList.add(new Novel(isbn, price));
@@ -59,11 +59,10 @@ public class BookStoreApplication {
 				continue;
 			}
 		
-			} catch (NumberFormatException e) {
-				System.out.println("숫자를 입력해주세요.");
-				continue;
-				
-			}
+//			} catch (NumberFormatException e) {
+//				System.out.println("숫자를 입력해주세요.");
+//				continue;
+//			}
 		}
 		
 		

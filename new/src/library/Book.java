@@ -14,6 +14,7 @@ public class Book {
 	public Book(String isbn, int price) {
 		if (isbn.contains("*")) {
 			recoverMissingDigit(isbn);
+		} else {
 			this.isbn = isbn;
 		}
 		this.price = price;
@@ -40,30 +41,44 @@ public class Book {
 	}
 	
 	public void recoverMissingDigit(String isbn) {
-		List<String> list = new ArrayList<String>();
+		int starIndex = 0;
 		int sum = 0;
-		int starNum = 0;
+		int starValue = 0;
+		String newIsbn = "";
 		
-		list.add(isbn);
-		
-		for (String word : list) {
-			if (word == "*") continue;
-			
-			int wordInt = Integer.parseInt(word);
-			if (wordInt%2 == 0) {
-				sum += wordInt;
+		// 별은 index번호 저장하고 숫자는 sum에 합하기 (짝수: 1곱하고 합, 홀수: 3곱하고 합) 
+		for (int i = 0; i < isbn.length(); i++) {
+			int wordInt = isbn.charAt(i) - '0';
+
+			if (!(wordInt >= 0 && wordInt <= 9)) {
+				starIndex = i;
 			} else {
-				sum += wordInt*3;
+				if (i%2 == 0) sum += wordInt;
+				else sum += (wordInt * 3);
 			}
-			for (int i = 1; i < 10; i++) {
-				if ((sum += i) % 10 == 0) {
-					starNum = i;
-				}
-			}
-			list.set(Integer.parseInt(word), String.valueOf(wordInt));
 		}
-		System.out.println(sum);
+		
+		// 별의 index번호가 홀수,짝수인지에 따라서 1,3곱하여 합한 값에 10을 나눌때 나머지가 0인 값 찾기
+		if (starIndex%2 == 0) {
+			for (int i = 0; i <= 9; i++) {
+				if ((sum + i) % 10 == 0) starValue = i;
+			}
+		} else {
+			for (int i = 0; i <= 9; i++) {
+				if ((sum + i*3) % 10 == 0) starValue = i;
+			}
+		}
+		
+		// 빈 문자열에 기존 isbn번호를 넣고, 별이 있던 index번호 자리는 새로운 값으로 넣기
+		for (int i = 0; i < isbn.length(); i++) {
+			if (i == starIndex) {
+				newIsbn += String.valueOf(starValue);
+			} else {
+				newIsbn += String.valueOf(isbn.charAt(i));
+			}
+		}
+		
+		// 필드값에 새로운 isbn 저장
+		this.isbn = newIsbn;
 	}
-	
-	
 }
