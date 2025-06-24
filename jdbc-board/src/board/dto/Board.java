@@ -26,7 +26,7 @@ public class Board {
 	private String title;
 	private String writer;
 	private String content;
-	private LocalDateTime regDate;
+	private LocalDateTime regDate; // DB에서 가져올 때 CamelCase로 잘 바꿔주기..
 	private LocalDateTime updDate;
 	
 	public Board() {
@@ -39,69 +39,69 @@ public class Board {
 		this.content = content;
 	}
 
-	public Board(int no, String title, String writer, String content, LocalDateTime regDate, LocalDateTime updDate) {
-		this.no = no;
-		this.title = title;
-		this.writer = writer;
-		this.content = content;
-		this.regDate = regDate;
-		this.updDate = updDate;
-	}
+//	public Board(int no, String title, String writer, String content, LocalDateTime regDate, LocalDateTime updDate) {
+//		this.no = no;
+//		this.title = title;
+//		this.writer = writer;
+//		this.content = content;
+//		this.regDate = regDate;
+//		this.updDate = updDate;
+//	}
 
 //	lombok으로 자동 추가
-	public int getNo() {
-		return no;
-	}
+//	public int getNo() {
+//		return no;
+//	}
+//
+//	public void setNo(int no) {
+//		this.no = no;
+//	}
+//
+//	public String getTitle() {
+//		return title;
+//	}
+//
+//	public void setTitle(String title) {
+//		this.title = title;
+//	}
+//
+//	public String getWriter() {
+//		return writer;
+//	}
+//
+//	public void setWriter(String writer) {
+//		this.writer = writer;
+//	}
+//
+//	public String getContent() {
+//		return content;
+//	}
+//
+//	public void setContent(String content) {
+//		this.content = content;
+//	}
+//
+//	public LocalDateTime getRegDate() {
+//		return regDate;
+//	}
+//
+//	public void setRegDate(LocalDateTime regDate) {
+//		this.regDate = regDate;
+//	}
+//
+//	public LocalDateTime getUpdDate() {
+//		return updDate;
+//	}
+//
+//	public void setUpdDate(LocalDateTime updDate) {
+//		this.updDate = updDate;
+//	}
 
-	public void setNo(int no) {
-		this.no = no;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getWriter() {
-		return writer;
-	}
-
-	public void setWriter(String writer) {
-		this.writer = writer;
-	}
-
-	public String getContent() {
-		return content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-
-	public LocalDateTime getRegDate() {
-		return regDate;
-	}
-
-	public void setRegDate(LocalDateTime regDate) {
-		this.regDate = regDate;
-	}
-
-	public LocalDateTime getUpdDate() {
-		return updDate;
-	}
-
-	public void setUpdDate(LocalDateTime updDate) {
-		this.updDate = updDate;
-	}
-
-	@Override
-	public String toString() {
-		return "Board [no=" + no + ", title=" + title + ", writer=" + writer + ", content=" + content + ", regDate="
-				+ regDate + ", updDate=" + updDate + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Board [no=" + no + ", title=" + title + ", writer=" + writer + ", content=" + content + ", regDate="
+//				+ regDate + ", updDate=" + updDate + "]";
+//	}
 	
 
 }
